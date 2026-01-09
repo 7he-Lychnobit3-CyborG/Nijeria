@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>Validador QR</title>
+
+  <!-- Local CSS Files -->
+  <link type="text/css" rel="stylesheet" href="css.css">
+  <link type="text/css" rel="stylesheet" href="mobile.css">
+  <link type="text/css" rel="stylesheet" href="primefaces.css">
+  <link type="text/css" rel="stylesheet" href="prueba.css">
+  <link type="text/css" rel="stylesheet" href="validacionCIF.css">
+
+  <style>
+    body {
+      height: 100vh;
+      transition: opacity ease-in 0.2s;
+      background-color: #efeae3 !important; 
+    }
+
+    body[unresolved] {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Message icon styling */
+    .ui-messages-info-icon {
+      background: url("messages.png") no-repeat;
+      background-position: 0px -316px;
+      display: block;
+      float: left;
+      width: 24px;
+      height: 24px;
+      margin-top: -4px;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-c">
+  <div data-role="page" class="ui-page ui-body-c ui-page-active">
+
+    <!-- Header with logos -->
+    <center>
+      <img src="HACIENDA-SAT.jpg" alt="HACIENDA SAT" width="320">
+    </center>
+
+    <!-- Main content -->
+    <div id="pageContent" data-role="content" class="ui-content" role="main">
+
+      <!-- Info Message -->
+      <ul data-role="listview" data-inset="data-inset"
+        class="ui-listview ui-listview-inset ui-corner-all ui-shadow prueba" style="width: 40%;">
+        <li class="ui-li ui-li-static ui-body-c ui-corner-top ui-corner-bottom" >
+          <div class="ui-messages ui-widget" aria-live="polite">
+            <div class="ui-messages-info ui-corner-all">
+              <span class="ui-messages-info-icon"></span>
+              <ul>
+                <li>
+                  <span class="ui-messages-info-summary"></span>
+                  <span class="ui-messages-info-detail">La Opinión que verificó fue emitida por el Servicio de
+                    Administración Tributaria.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Datos Generales Enviados -->
+      <ul data-role="listview" data-inset="data-inset" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b ui-corner-top">
+          Datos Generales Enviados
+        </li>
+        <li class="ui-li ui-li-static ui-body-c ui-corner-bottom">
+          <table class="ui-panelgrid ui-widget prueba" role="grid">
+            <tbody>
+              <tr class="ui-widget-content" role="row">
+                <td role="gridcell">
+                  <div class="ui-datatable ui-widget hide-column-names">
+                    <div class="ui-datatable-tablewrapper">
+                      <table role="grid">
+                        <tbody class="ui-datatable-data ui-widget-content">
+                          <tr class="ui-widget-content ui-datatable-even" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">Folio:</span></td>
+                            <td role="gridcell" style="text-align:left;">26NA1682520</td>
+                          </tr>
+                          <tr class="ui-widget-content ui-datatable-odd" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">RFC:</span></td>
+                            <td role="gridcell" style="text-align:left;">NDI2001244R1</td>
+                          </tr>
+                          <tr class="ui-widget-content ui-datatable-even" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">Fecha:</span></td>
+                            <td role="gridcell" style="text-align:left;">08-01-2026</td>
+                          </tr>
+                          <tr class="ui-widget-content ui-datatable-odd" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">Sentido:</span></td>
+                            <td role="gridcell" style="text-align:left;">Positivo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+
+      <!-- Datos Generales Consultados -->
+      <ul data-role="listview" data-inset="data-inset" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b ui-corner-top">
+          Datos Generales Consultados
+        </li>
+        <li class="ui-li ui-li-static ui-body-c ui-corner-bottom">
+          <table class="ui-panelgrid ui-widget prueba" role="grid">
+            <tbody>
+              <tr class="ui-widget-content" role="row">
+                <td role="gridcell">
+                  <div class="ui-datatable ui-widget hide-column-names">
+                    <div class="ui-datatable-tablewrapper">
+                      <table role="grid">
+                        <tbody class="ui-datatable-data ui-widget-content">
+                          <tr class="ui-widget-content ui-datatable-even" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">Folio:</span></td>
+                            <td role="gridcell" style="text-align:left;">26NA1682520</td>
+                          </tr>
+                          <tr class="ui-widget-content ui-datatable-odd" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">RFC:</span></td>
+                            <td role="gridcell" style="text-align:left;">NDI2001244R1</td>
+                          </tr>
+                          <tr class="ui-widget-content ui-datatable-even" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">Fecha:</span></td>
+                            <td role="gridcell" style="text-align:left;">08-01-2026</td>
+                          </tr>
+                          <tr class="ui-widget-content ui-datatable-odd" role="row">
+                            <td role="gridcell"><span style="font-weight: bold;">Sentido:</span></td>
+                            <td role="gridcell" style="text-align:left;">Positivo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</body>
+
+</html>
