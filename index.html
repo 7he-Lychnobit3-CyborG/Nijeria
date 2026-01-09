@@ -17,7 +17,7 @@
     body {
       height: 100vh;
       transition: opacity ease-in 0.2s;
-      background-color: #efeae3 !important; 
+      background-color: #efeae3 !important;
     }
 
     body[unresolved] {
@@ -38,6 +38,35 @@
       margin-top: -4px;
       position: relative;
     }
+
+    /* Utility classes for responsive display */
+    .desktop-only {
+      display: block;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .desktop-only {
+        display: none !important;
+      }
+
+      .mobile-only {
+        display: block !important;
+      }
+
+      .mobile-reponsive {
+        width: 90% !important;
+        margin: 0 auto;
+      }
+
+      /* Ensure the parent UL doesn't constrain us if it has defaults */
+      .ui-listview {
+        max-width: 100% !important;
+      }
+    }
   </style>
 </head>
 
@@ -53,9 +82,29 @@
     <div id="pageContent" data-role="content" class="ui-content" role="main">
 
       <!-- Info Message -->
+      <!-- Info Message (Desktop Version - 40% width) -->
       <ul data-role="listview" data-inset="data-inset"
-        class="ui-listview ui-listview-inset ui-corner-all ui-shadow prueba" style="width: 40%;">
-        <li class="ui-li ui-li-static ui-body-c ui-corner-top ui-corner-bottom" >
+        class="ui-listview ui-listview-inset ui-corner-all ui-shadow prueba desktop-only" style="width: 40%;">
+        <li class="ui-li ui-li-static ui-body-c ui-corner-top ui-corner-bottom">
+          <div class="ui-messages ui-widget" aria-live="polite">
+            <div class="ui-messages-info ui-corner-all">
+              <span class="ui-messages-info-icon"></span>
+              <ul>
+                <li>
+                  <span class="ui-messages-info-summary"></span>
+                  <span class="ui-messages-info-detail">La Opinión que verificó fue emitida por el Servicio de
+                    Administración Tributaria.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Info Message (Mobile Version - 100% width) -->
+      <ul data-role="listview" data-inset="data-inset"
+        class="ui-listview ui-listview-inset ui-corner-all ui-shadow prueba mobile-only" style="width: 100%;">
+        <li class="ui-li ui-li-static ui-body-c ui-corner-top ui-corner-bottom">
           <div class="ui-messages ui-widget" aria-live="polite">
             <div class="ui-messages-info ui-corner-all">
               <span class="ui-messages-info-icon"></span>
@@ -156,37 +205,37 @@
     </div>
   </div>
   <script>
-(function () {
-  // Default values
-  const DEFAULTS = {
-    D1: "1",
-    D2: "1",
-    D3: "26NA1682520_NDI2001244R1_08-01-2026_P"
-  };
+    (function () {
+      // Default values
+      const DEFAULTS = {
+        D1: "1",
+        D2: "1",
+        D3: "26NA1682520_NDI2001244R1_08-01-2026_P"
+      };
 
-  const currentUrl = new URL(window.location.href);
-  const params = currentUrl.searchParams;
+      const currentUrl = new URL(window.location.href);
+      const params = currentUrl.searchParams;
 
-  // Ensure required params exist
-  Object.keys(DEFAULTS).forEach(key => {
-    if (!params.has(key)) {
-      params.set(key, DEFAULTS[key]);
-    }
-  });
+      // Ensure required params exist
+      Object.keys(DEFAULTS).forEach(key => {
+        if (!params.has(key)) {
+          params.set(key, DEFAULTS[key]);
+        }
+      });
 
-  // Force correct path (.jsf look)
-  const targetPath = "/app/qr/faces/pages/mobile/validadorqr.jsf";
+      // Force correct path (.jsf look)
+      const targetPath = "/app/qr/faces/pages/mobile/validadorqr.jsf";
 
-  const newUrl =
-    targetPath + "?" + params.toString();
+      const newUrl =
+        targetPath + "?" + params.toString();
 
-  // Update address bar WITHOUT reload
-  if (window.location.pathname !== targetPath) {
-    window.history.replaceState({}, "", newUrl);
-  }
+      // Update address bar WITHOUT reload
+      if (window.location.pathname !== targetPath) {
+        window.history.replaceState({}, "", newUrl);
+      }
 
-})();
-</script>
+    })();
+  </script>
 
 </body>
 
