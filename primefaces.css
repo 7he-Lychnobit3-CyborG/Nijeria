@@ -1724,7 +1724,7 @@ div.ui-button, .ui-splitbutton {
     margin: 0;
     padding: 0;
     display: block;
-    background: url("/messages.png") no-repeat;
+    background: url("/app/qr/faces/javax.faces.resource/messages/messages.png?ln=primefaces") no-repeat;
 }
 
 .ui-growl-image-info {
@@ -2213,7 +2213,7 @@ div.ui-button, .ui-splitbutton {
 }
 
 .ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon,.ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
-    background: url("/messages.png") no-repeat;
+    background: url("/app/qr/faces/javax.faces.resource/messages/messages.png?ln=primefaces") no-repeat;
     display: block;
     float: left;
     margin: 0;
