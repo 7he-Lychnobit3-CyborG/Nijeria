@@ -1724,7 +1724,7 @@ div.ui-button, .ui-splitbutton {
     margin: 0;
     padding: 0;
     display: block;
-    background: url("/app/qr/faces/javax.faces.resource/messages/messages.png?ln=primefaces") no-repeat;
+    background: url("/messages.png") no-repeat;
 }
 
 .ui-growl-image-info {
