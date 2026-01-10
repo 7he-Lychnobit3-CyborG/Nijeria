@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/app/qr/faces/pages/mobile/validadorqr.jsf",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
