@@ -2212,7 +2212,7 @@ div.ui-button, .ui-splitbutton {
     padding: 2px 5px;
 }
 
-.ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon,.ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
+/*.ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon,.ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
     background: url("/app/qr/faces/javax.faces.resource/messages/messages.png?ln=primefaces") no-repeat;
     display: block;
     float: left;
@@ -2230,7 +2230,7 @@ div.ui-button, .ui-splitbutton {
 .ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
     height: 16px;
     width: 16px;
-}
+}*/
 
 .ui-messages-info-summary, .ui-messages-warn-summary, .ui-messages-error-summary, .ui-messages-fatal-summary, .ui-message-info-summary, .ui-message-warn-summary, .ui-message-error-summary, .ui-message-fatal-summary {
     margin-left: 10px;
